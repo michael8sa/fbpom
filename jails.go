@@ -1,7 +1,7 @@
 /*
-Quimby - An open-source small tool written in GO for automating backups of FreeBSD jails managed with Bastille.
+jails - An open-source small tool written in GO for automating backups of FreeBSD jails managed with Bastille.
 
-To compile for FreeBSD execute "env GOOS=freebsd GOARCH=amd64 go build -o quimby"
+To compile for FreeBSD execute "env GOOS=freebsd GOARCH=amd64 go build -o jails"
 */
 
 package main
@@ -108,8 +108,8 @@ func toBackup(Mode string, Days string) {
 
 	// Backup jails
 	InfoLogger.Printf("----------------------------------------------------------------\n")
-	InfoLogger.Printf("Starting Quimby - version %v (%v days of data retention)\n", Version, Days)
-	log.Printf("Starting Quimby v%v (%v days of data retention)\n", Version, Days)
+	InfoLogger.Printf("Starting jails - version %v (%v days of data retention)\n", Version, Days)
+	log.Printf("Starting jails v%v (%v days of data retention)\n", Version, Days)
 
 	for _, i := range Jails {
 
